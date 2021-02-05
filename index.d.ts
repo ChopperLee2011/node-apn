@@ -17,6 +17,17 @@ export interface ProviderToken {
   teamId: string;
 }
 
+export interface ProviderProxy {
+  /**
+   * The address of proxy which a client used to connect
+   */
+  host: string;
+  /**
+   * The port of proxy server listening on
+   */
+  port: number;
+}
+
 export interface ProviderOptions {
   /**
    * Configuration for Provider Authentication Tokens. (Defaults to: null i.e. fallback to Certificates)
@@ -46,6 +57,10 @@ export interface ProviderOptions {
    * Specifies which environment to connect to: Production (if true) or Sandbox - The hostname will be set automatically. (Defaults to NODE_ENV == "production", i.e. false unless the NODE_ENV environment variable is set accordingly)
    */
   production?: boolean;
+  /**
+   * Configuration for Provider proxy.
+   */
+  proxy?: ProviderProxy;
   /**
    * Reject Unauthorized property to be passed through to tls.connect() (Defaults to `true`)
    */

@@ -27,6 +27,8 @@ node-apn
 [devdependencies-image]:https://david-dm.org/node-apn/node-apn/dev-status.svg
 [devdependencies-url]:https://david-dm.org/node-apn/node-apn?type=dev
 
+**note**
+fork from https://github.com/node-apn/node-apn, allow to use proxy option for TS.
 ## Features
 
 - Based on HTTP/2 based provider API
